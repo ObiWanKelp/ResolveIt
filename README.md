@@ -60,12 +60,13 @@
 
 ## **Database Design (RDBMS Schema)**
 
-**Tables Overview:**
+**Tables Used:**
 
-* **Students** → `student_id (PK)`, `name`, `email`, `room_no`
-* **Staff** → `staff_id (PK)`, `name`, `dept`, `contact`
-* **Admin** → `admin_id (PK)`, `username`, `password`
-* **Issues** → `issue_id (PK)`, `title`, `description`, `image_url`, `location`, `status`, `student_id (FK)`, `staff_id (FK)`
+Students 
+Staff 
+Admin 
+Issues 
+
 
 **Relationships:**
 
