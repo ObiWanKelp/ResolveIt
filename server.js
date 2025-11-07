@@ -96,3 +96,13 @@ app.delete("/delete-issue/:id", (req, res) => {
 app.listen(PORT, () =>
   console.log(`🚀 Server running on http://localhost:${PORT}`)
 );
+
+const path = require("path");
+
+// serve frontend if needed
+app.use(express.static(path.join(__dirname, ".")));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
