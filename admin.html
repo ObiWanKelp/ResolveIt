@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resolve IT – Admin Panel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-content">
+        <h2 class="logo">Resolve IT – Admin</h2>
+        <div class="nav-links">
+          <a href="login.html" class="nav-item">Logout</a>
+        </div>
+        <button id="logoutBtn" class="cta logout">Logout</button>
+      </div>
+    </nav>
+
+    <main class="dashboard">
+      <h1>Welcome Admin 👑</h1>
+      <section class="user-reports">
+        <h2>All Issues Overview</h2>
+        <div id="adminIssueList" class="issue-grid"></div>
+      </section>
+    </main>
+    <script src="common.js"></script>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

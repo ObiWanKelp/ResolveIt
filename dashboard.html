@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resolve IT – Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="nav-content">
+        <h2 class="logo">Resolve IT</h2>
+        <div class="nav-links">
+          <a href="index.html" class="nav-item">Home</a>
+          <a href="dashboard.html" class="nav-item active">Dashboard</a>
+          <a href="help.html" class="nav-item">❓ Help</a>
+        </div>
+        <button id="logoutBtn" class="cta logout">Logout</button>
+      </div>
+    </nav>
+
+    <main class="dashboard">
+      <h1>👋 Welcome, Student</h1>
+
+      <button id="reportBtn" class="cta">Submit New Issue</button>
+
+      <section class="stats">
+        <div class="stat-card">
+          <h3>Total Reports</h3>
+          <p id="totalReports">0</p>
+        </div>
+        <div class="stat-card">
+          <h3>Resolved</h3>
+          <p id="resolvedReports">0</p>
+        </div>
+        <div class="stat-card">
+          <h3>In Progress</h3>
+          <p id="inProgressReports">0</p>
+        </div>
+      </section>
+
+      <section class="user-reports">
+        <h2>🧾 Your Reported Issues</h2>
+        <div id="userReportList" class="issue-grid"></div>
+      </section>
+    </main>
+
+    <section id="form-section" class="form hidden">
+      <div class="form-card">
+        <h2>📝 Report an Issue</h2>
+        <form id="issueForm">
+          <label>Name:</label>
+          <input type="text" id="name" placeholder="Your name" required />
+
+          <label>Campus:</label>
+          <select id="campus" required>
+            <option value="">Select Campus</option>
+            <option>Sector-62</option>
+            <option>Sector-128</option>
+          </select>
+
+          <label>Location / Block / Room No:</label>
+          <input
+            type="text"
+            id="location"
+            placeholder="e.g., Near Cafe/In front of ABB3"
+            required
+          />
+
+          <label>Category:</label>
+          <select id="category" required>
+            <option value="">Select Category</option>
+            <option>Electrical</option>
+            <option>Plumbing</option>
+            <option>Cleanliness</option>
+            <option>Internet/WiFi</option>
+            <option>Furniture</option>
+            <option>Security</option>
+            <option>Water Supply</option>
+            <option>AC / Cooling</option>
+            <option>Lighting</option>
+            <option>Hostel Maintenance</option>
+            <option>Food / Mess</option>
+            <option>Transport</option>
+            <option>Library</option>
+            <option>Classroom</option>
+            <option>Other</option>
+          </select>
+
+          <div id="conditionalField" class="hidden">
+            <label>Specify:</label>
+            <input
+              type="text"
+              id="otherField"
+              placeholder="Please specify..."
+            />
+          </div>
+
+          <label>Description:</label>
+          <textarea
+            id="desc"
+            placeholder="Describe the issue..."
+            required
+          ></textarea>
+
+          <button type="submit">Submit Report</button>
+          <button type="button" id="cancelBtn" class="cancel">Cancel</button>
+        </form>
+      </div>
+    </section>
+    <script src="common.js"></script>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>
