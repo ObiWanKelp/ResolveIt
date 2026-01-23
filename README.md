@@ -80,5 +80,6 @@ Issues 
 * Live notifications
 * Map-based issue reporting
 * AI-powered issue categorization
+* NEXT WWEEEK
 
 ---
